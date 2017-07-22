@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12 return">
-    <a class="arrow" href="#!/PopularMovies"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
+    <a class="arrow" ng-click="back()" href=""><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
     <h2 class="title"><i class="glyphicon glyphicon-film"></i>{{movie.title}}</h2>
   </div>
 </div>
@@ -22,9 +22,18 @@
             <p><span>Users Rating: </span><i class="glyphicon glyphicon-star small-icon"></i>{{ movie.vote_average }}</p>
             </p>
           </li>
-          <li><p><span>Overview</span> {{movie.overview}}</p></li>
+          <li>
+            <p><span>Overview</span> {{movie.overview}}</p>
+          </li>
+          <li><a ng-click="watchVideo()" class="btnVideo" ng-model="video" aria-label="Toggle ngShow">Watch Video</a></li>
         </ul>
       </div>
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="youtube animate-show-hide" ng-show="video" >
+    <iframe ng-src="{{youtube}}" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+

@@ -147,8 +147,32 @@ a.title>span {
       color: #ED671E;
       margin-right: 10px;
     }
+    a {
+      cursor: pointer;
+      color: white;
+      background: black;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      display: inline-block;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
+
+.youtube {
+  padding: 2rem;
+  text-align: center;
+}
+.youtube iframe {
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+}
+
+
 
 @media (max-width: 500px) {
 
