@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularMovies">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Movies</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- common -->
+  <nav>
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header custom-nav">
+        <button type="button" class="navbar-toggle collapsed collapsed-custom-nav" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+        <a class="navbar-brand title" href="#!">Angular <span>Movies</span></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="container">
+        	<ul class="nav navbar-nav">
+          <li><a href="#!/PopularMovies">Popular Movies</a></li>
+          <li><a href="#!/topRatedMovies">Top Rated Movies</a></li>
+          <li><a href="#!/nowPlaying">Now Playing</a></li>
+          <li><a href="#!/upComingMovies">Coming Soon</a></li>
+        </ul>
+        </div>
+      </div>
+      
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+    <ng-view></ng-view>
+  </div>
+  <!-- jQuery And Bootstrap JS CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Angular CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+  <!-- MAIN MODULE -->
+  <script src="js/app.js"></script>
+  <!-- ROUTE DATASERVICE -->
+  <script src="js/services/moviesDataServices.js"></script>
+  <!-- ROUTE POPULARMOVIES -->
+  <script src="js/routes/popularMovies/controller.js"></script>
+  <script src="js/routes/popularMovies/index.js"></script>
+  <!-- ROUTE TOPRATEDMOVIES -->
+  <script src="js/routes/topRatedMovies/controller.js"></script>
+  <script src="js/routes/topRatedMovies/index.js"></script>
+  <!-- ROUTE UPCOMINGMOVIES -->
+  <script src="js/routes/upComingMovies/controller.js"></script>
+  <script src="js/routes/upComingMovies/index.js"></script>
+  <!-- ROUTE NOWPLAYING -->
+  <script src="js/routes/nowPlaying/controller.js"></script>
+  <script src="js/routes/nowPlaying/index.js"></script>
+   <!-- ROUTE MOVIE -->
+  <script src="js/routes/movie/controller.js"></script>
+  <script src="js/routes/movie/index.js"></script>
+</body>
+
+</html>
