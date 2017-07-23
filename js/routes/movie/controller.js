@@ -16,10 +16,6 @@ angular.module('angularMovies')
       window.history.back()
     }
     $scope.watchVideo = function () {
-      if ($scope.video) {
-        $scope.video = false
-      } else {
-        $scope.video = true
-      }
+      $scope.video = !$scope.video
     }
   })

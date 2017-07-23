@@ -17,4 +17,8 @@ angular.module('angularMovies')
          templateUrl: 'js/routes/movie/template.html',
          controller: 'movieCtrl'
        })
+       .when('#!/:id', {
+         templateUrl: 'js/routes/home/template.html',
+         controller: 'movieCtrl'
+       })
   })

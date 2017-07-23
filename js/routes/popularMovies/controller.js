@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('angularMovies')
   .controller('popularMoviesCtrl', function ($scope, $rootScope, moviesDataServices) {
     moviesDataServices.getPopularMovies()
