@@ -9,3 +9,4 @@ It contains information for the most rated movies, coming soon movies, popular m
 
 It uses the TMDB API
 
+You can test the app here -> https://devtoni.github.io/angular-movies-app/.
