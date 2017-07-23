@@ -3,21 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angular Movies</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <!-- common -->
-  <nav>
+  <nav class="custom-nav">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header custom-nav">
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed collapsed-custom-nav" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="glyphicon glyphicon-chevron-down"></span>
         </button>
@@ -34,7 +36,6 @@
         </ul>
         </div>
       </div>
-      
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
@@ -52,6 +53,9 @@
   <script src="js/app.js"></script>
   <!-- ROUTE DATASERVICE -->
   <script src="js/services/moviesDataServices.js"></script>
+  <!-- ROUTE HOME -->
+  <script src="js/routes/home/controller.js"></script>
+  <script src="js/routes/home/index.js"></script>
   <!-- ROUTE POPULARMOVIES -->
   <script src="js/routes/popularMovies/controller.js"></script>
   <script src="js/routes/popularMovies/index.js"></script>
