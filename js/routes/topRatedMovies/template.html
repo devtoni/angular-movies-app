@@ -4,10 +4,15 @@
     <h2 class="title"><i class="glyphicon glyphicon-film"></i>Top Rated <span>Movies</span></h2>
   </div>
 </div>
+<div class="row search">
+  <div class="col-xs-12">
+    <input ng-model="query" type="text" placeholder="Filter by Name" autofocus />
+  </div>
+</div>
 <div class="row">
   <div class="col-xs-12">
     <div class="gal">
-      <div class="image-container" ng-repeat="movie in topMovies">
+      <div class="image-container" ng-repeat="movie in topMovies | filter : {title : query}">
         <a ng-href="#!/topRatedMovies/{{movie.id}}"><img ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" class="image"></a>
         <div class="overlay">
           <div class="text"><p>{{movie.title}}</p></div>

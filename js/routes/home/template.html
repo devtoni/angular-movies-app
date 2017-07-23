@@ -1,0 +1,55 @@
+
+<div class="row home">
+<!-- popular movies -->
+  <div class="col-xs-12">
+  <a  href="#!/PopularMovies" class="title"><i class="glyphicon glyphicon-film"></i>Go to popular movies... </a>
+    <div class="home-display">
+      <div class="image-container" ng-repeat="movie in popularMovies">
+        <a ng-href="#!/PopularMovies/{{movie.id}}"><img class="home-img" ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" class="image"></a>
+        <div class="overlay">
+          <div class="text"><p>{{movie.title}}</p></div>
+          <div class="text"><i class="glyphicon glyphicon-film"></i>{{movie.release_date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- top rated movies -->
+   <div class="col-xs-12">
+  <a  href="#!/topRatedMovies" class="title"><i class="glyphicon glyphicon-film"></i>Go to top rated movies...</a>
+    <div class="home-display">
+      <div class="image-container" ng-repeat="movie in topMovies">
+        <a ng-href="#!/PopularMovies/{{movie.id}}"><img class="home-img" ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" class="image"></a>
+        <div class="overlay">
+          <div class="text"><p>{{movie.title}}</p></div>
+          <div class="text"><i class="glyphicon glyphicon-film"></i>{{movie.release_date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- now playing -->
+  <div class="col-xs-12">
+  <a  href="#!/nowPlaying" class="title"><i class="glyphicon glyphicon-film"></i>Go to now playing movies...</a>
+    <div class="home-display">
+      <div class="image-container" ng-repeat="movie in nowPlaying">
+        <a ng-href="#!/PopularMovies/{{movie.id}}"><img class="home-img" ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" class="image"></a>
+        <div class="overlay">
+          <div class="text"><p>{{movie.title}}</p></div>
+          <div class="text"><i class="glyphicon glyphicon-film"></i>{{movie.release_date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- coming soon -->
+   <div class="col-xs-12">
+  <a  href="#!/upComingMovies" class="title"><i class="glyphicon glyphicon-film"></i>Go to coming soon movies...</a>
+    <div class="home-display">
+      <div class="image-container" ng-repeat="movie in comingSoon">
+        <a ng-href="#!/PopularMovies/{{movie.id}}"><img class="home-img" ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" class="image"></a>
+        <div class="overlay">
+          <div class="text"><p>{{movie.title}}</p></div>
+          <div class="text"><i class="glyphicon glyphicon-film"></i>{{movie.release_date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
