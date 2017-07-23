@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('angularMovies')
   .factory('moviesDataServices', function ($http) {
     const apiKey = '8d181bcb5e80a929053da01f6921e4a9'

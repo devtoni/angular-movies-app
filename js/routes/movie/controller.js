@@ -1,4 +1,4 @@
-
+/* global angular */
 angular.module('angularMovies')
   .controller('movieCtrl', function ($scope, $routeParams, $sce, moviesDataServices) {
     $scope.idMovie = $routeParams.id

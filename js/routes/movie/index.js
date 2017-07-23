@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('angularMovies')
   .config(function ($routeProvider) {
     $routeProvider
