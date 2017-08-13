@@ -1,9 +1,10 @@
 /* global angular */
 angular.module('angularMovies')
-  .controller('nowPlayingCtrl', function ($scope, moviesDataServices) {
+  .controller('nowPlayingCtrl', function (moviesDataServices) {
+    var vm = this
     moviesDataServices.nowPlayingMovies()
       .then(function (movies) {
         console.log(movies)
-        $scope.nowPlaying = movies.data.results
+        vm.nowPlaying = movies.data.results
       })
   })
