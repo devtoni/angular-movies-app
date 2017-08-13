@@ -1,8 +1,9 @@
 /* global angular */
 angular.module('angularMovies')
-  .controller('upComingMoviesCtrl', function ($scope, moviesDataServices) {
+  .controller('upComingMoviesCtrl', function (moviesDataServices) {
+    var vm = this
     moviesDataServices.upComingMovies()
       .then(function (movies) {
-        $scope.comingSoon = movies.data.results
+        vm.comingSoon = movies.data.results
       })
   })

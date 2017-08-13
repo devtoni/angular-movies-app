@@ -4,6 +4,7 @@ angular.module('angularMovies')
     $routeProvider
       .when('/PopularMovies', {
         templateUrl: 'js/routes/popularMovies/template.html',
-        controller: 'popularMoviesCtrl'
+        controller: 'popularMoviesCtrl',
+        controllerAs: 'vm'
       })
   })

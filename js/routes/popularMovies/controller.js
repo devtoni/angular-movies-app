@@ -1,9 +1,9 @@
 /* global angular */
 angular.module('angularMovies')
-  .controller('popularMoviesCtrl', function ($scope, moviesDataServices) {
+  .controller('popularMoviesCtrl', function (moviesDataServices) {
+    var vm = this
     moviesDataServices.getPopularMovies()
       .then(function (movies) {
-        console.log(movies)
-        $scope.popularMovies = movies.data.results
+        vm.popularMovies = movies.data.results
       })
   })
