@@ -162,6 +162,13 @@ h2.title {
   background-color: #000000;
   border: 2px solid #555555; }
 
+.findMovie {
+  text-align: center; }
+  .findMovie input {
+    color: black;
+    padding: 1rem;
+    width: 328px; }
+
 @media (max-width: 500px) {
   .gal {
     -webkit-column-count: 1;

@@ -27,12 +27,17 @@ angular.module('angularMovies')
       const url = 'https://api.themoviedb.org/3/movie/' + movieId + '?api_key=' + apiKey + '&append_to_response=videos'
       return $http.get(url)
     }
+    function getOneFilm (filmName) {
+      const url = 'https://api.themoviedb.org/3/search/movie?api_key=' + apiKey + '&query=' + filmName
+      return $http.get(url)
+    }
     return {
       getPopularMovies: getPopularMovies,
       topRatedMovies: getTopRatedMovies,
       upComingMovies: getUpComingMovies,
       nowPlayingMovies: getNowPlayingMovies,
-      infoMovie: getMovieById
+      infoMovie: getMovieById,
+      getOneFilm: getOneFilm
 
     }
   })

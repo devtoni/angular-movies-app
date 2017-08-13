@@ -4,6 +4,7 @@ angular.module('angularMovies')
     $routeProvider
       .when('/nowPlaying', {
         templateUrl: 'js/routes/nowPlaying/template.html',
-        controller: 'nowPlayingCtrl'
+        controller: 'nowPlayingCtrl',
+        controllerAs: 'vm'
       })
   })

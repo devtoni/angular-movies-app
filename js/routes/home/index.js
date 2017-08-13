@@ -4,6 +4,7 @@ angular.module('angularMovies')
     $routeProvider
       .when('/', {
         templateUrl: 'js/routes/home/template.html',
-        controller: 'homeCtrl'
+        controller: 'homeCtrl',
+        controllerAs: 'vm'
       })
   })

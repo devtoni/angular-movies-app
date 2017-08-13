@@ -1,20 +1,18 @@
 /* global angular */
 angular.module('angularMovies')
-  .controller('homeCtrl', function ($scope, $rootScope, moviesDataServices) {
-    moviesDataServices.nowPlayingMovies()
+  .controller('homeCtrl', function (moviesDataServices, $q) {
+    var vm = this
+    var nowPlayingPromise = moviesDataServices.nowPlayingMovies()
+    var topRatedPromise = moviesDataServices.topRatedMovies()
+    var upComingPromise = moviesDataServices.upComingMovies()
+    var getPopularPromise = moviesDataServices.getPopularMovies()
+
+    $q
+      .all([nowPlayingPromise, topRatedPromise, upComingPromise, getPopularPromise])
       .then(function (movies) {
-        $scope.nowPlaying = movies.data.results
-      })
-    moviesDataServices.topRatedMovies()
-      .then(function (movies) {
-        $scope.topMovies = movies.data.results
-      })
-    moviesDataServices.upComingMovies()
-      .then(function (movies) {
-        $scope.comingSoon = movies.data.results
-      })
-    moviesDataServices.getPopularMovies()
-      .then(function (movies) {
-        $scope.popularMovies = movies.data.results
+        vm.nowPlaying = movies[0].data.results
+        vm.topMovies = movies[1].data.results
+        vm.comingSoon = movies[2].data.results
+        vm.popularMovies = movies[3].data.results
       })
   })

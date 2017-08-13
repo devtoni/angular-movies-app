@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 return">
-      <a class="arrow" ng-click="back()" href=""><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
-      <h2 class="title"><i class="glyphicon glyphicon-film"></i>{{movie.title}}</h2>
+      <a class="arrow" ng-click="vm.back()" href=""><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
+      <h2 class="title"><i class="glyphicon glyphicon-film"></i>{{vm.movie.title}}</h2>
     </div>
   </div>
   <div class="row">
@@ -10,7 +10,7 @@
     <div class="col-sm-6">
       <div class="movie">
         <div class="image-movie">
-          <img ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" class="image img-responsive">
+          <img ng-src="https://image.tmdb.org/t/p/w500{{vm.movie.poster_path}}" alt="" class="image img-responsive">
         </div>
       </div>
     </div>
@@ -19,27 +19,27 @@
       <div class="content">
         <ul>
           <li>
-            <p><span>Release Date:</span> {{movie.release_date}}</p>
+            <p><span>Release Date:</span> {{vm.movie.release_date}}</p>
           </li>
           <li>
             <p><span>Genres:</span> {{genres}}</p>
           </li>
           <li>
-            <p><span>Users Rating: </span><i class="glyphicon glyphicon-star small-icon"></i>{{ movie.vote_average }}</p>
+            <p><span>Users Rating: </span><i class="glyphicon glyphicon-star small-icon"></i>{{ vm.movie.vote_average }}</p>
             </p>
           </li>
           <li>
-            <p><span>Overview</span> {{movie.overview}}</p>
+            <p><span>Overview</span> {{vm.movie.overview}}</p>
           </li>
-          <li><a ng-click="watchVideo()" class="btnVideo" ng-model="video" aria-label="Toggle ngShow">Watch Video</a></li>
+          <li><a ng-click="vm.watchVideo()" class="btnVideo" ng-model="vm.video" aria-label="Toggle ngShow">Watch Video</a></li>
         </ul>
       </div>
     </div>
   </div>
   <!-- youtube -->
   <div class="row">
-    <div class="youtube-box animate-show-hide" ng-show="video">
-      <iframe ng-src="{{youtube}}" frameborder="0" allowfullscreen></iframe>
+    <div class="youtube-box animate-show-hide" ng-show="vm.video">
+      <iframe ng-src="{{vm.youtube}}" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </div>

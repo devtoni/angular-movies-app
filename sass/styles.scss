@@ -200,6 +200,14 @@ h2.title {
   border: 2px solid #555555;
 }
 
+.findMovie {
+  text-align: center;
+  input{
+    color: black;
+    padding: 1rem;
+    width: 328px;
+  }
+}
 
 @media (max-width: 500px) {
 
